@@ -130,10 +130,10 @@ const SR=16000,N=512,HOP=256,NM=24,NC=10,NF=N/2+1,D=NC-1;
 /* Tunable calibration (all scores are 0..100) */
 const TUNE={
   matchBest:0.30,   // DTW distance ratio vs shuffled baseline that earns 100% match
-  matchWorst:1.00,  // ratio that earns 0% match
+  matchWorst:1.10,  // ratio that earns 0% match
   pitchBestErr:0.5, // average semitone error that earns 100% pitch accuracy
   pitchWorstErr:2.8,// average semitone error that earns 0%
-  wMatch:0.6, wAcc:0.4, // final = match*wMatch + accuracy*wAcc
+  wMatch:0.45, wAcc:0.55, // final = match*wMatch + accuracy*wAcc
   wPitch:0.65, wRhythm:0.35, // accuracy = pitch*wPitch + rhythm*wRhythm (pitch skipped for unvoiced clips)
   voicedNeeded:0.15 // fraction of voiced frames needed in the original to judge pitch
 };
